@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default () => (
-  <div>This is from my edit page</div>
-);
+export default (props) => {
+  return <div>Editing expense id {props.match.params.id}</div>
+}
