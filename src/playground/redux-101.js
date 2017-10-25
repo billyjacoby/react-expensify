@@ -21,10 +21,11 @@ type: 'SET',
 count,
 });
 
+// Reducers
+// 1. Reducers are pur funnctions (output is only determined by input)
+// 2. Never change state or action
 
-
-// sets the state, if no current state the default is used.
-const store = createStore((state = { count: 0}, action) => {
+const countReducer = (state = { count: 0}, action) => {
   switch (action.type) {
     case 'INCREMENT':
       const incrementBy = typeof action.incrementBy === 'number' ? action.incrementBy : 1;
@@ -47,7 +48,10 @@ const store = createStore((state = { count: 0}, action) => {
     default:
       return state;
   }
-});
+}
+
+// sets the state, if no current state the default is used.
+const store = createStore(countReducer);
 
 // getState returns the current state
 // console.log(store.getState());
