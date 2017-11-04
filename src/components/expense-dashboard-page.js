@@ -1,5 +1,9 @@
 import React from 'react';
 
+import ExpenseList from './expense-list';
+
 export default () => (
-  <div>This is from my dashboard component</div>
+  <div>
+    <ExpenseList/>
+  </div>
 );
