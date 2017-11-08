@@ -20,9 +20,12 @@ import AppRouter from "./routers/app-router"
 
 const store = configureStore();
 
-store.dispatch(addExpense({description: "Water Bill"}));
+store.dispatch(addExpense({description: "Water Bill", amount: 4500}));
 store.dispatch(addExpense({description: "Gas Bill"}));
-store.dispatch(setTextFilter('water'));
+
+setTimeout(() => {
+  store.dispatch(setTextFilter('water'));
+}, 3000)
 
 const state = store.getState();
 const visibleExpenses = getVisibileExpenses(state.expenses, state.filters);
