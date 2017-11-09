@@ -26,8 +26,8 @@ store.dispatch(addExpense({description: "Rent", amount: 110000}))
 
 const state = store.getState();
 const visibleExpenses = getVisibileExpenses(state.expenses, state.filters);
-console.log(visibleExpenses);
-console.log(state.filters);
+// console.log(visibleExpenses);
+// console.log(state.filters);
 
 const jsx = (
   <Provider store={store}>
