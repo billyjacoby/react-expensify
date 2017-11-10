@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 import {removeExpense} from '../actions/expenses';
 
-const ExpenseListItem = ({description, amount, createdAt, note, id, dispatch}) => (
+const ExpenseListItem = ({description, amount, createdAt, note, id}) => (
   <div>
     <Link to={`/edit/${id}`}>
       <h3>{description}</h3>
