@@ -14,6 +14,7 @@ import getVisibileExpenses from './selectors/expenses';
 // style
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import 'react-dates/lib/css/_datepicker.css';
 
 // routers
 import AppRouter from "./routers/app-router"
