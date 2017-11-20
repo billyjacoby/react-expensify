@@ -3,9 +3,9 @@
 exports[`should render the correct snapshot for no expenses 1`] = `
 <div>
   <div>
-    <p>
+    <h3>
       No expenses found!
-    </p>
+    </h3>
   </div>
 </div>
 `;
@@ -14,16 +14,13 @@ exports[`should render the correct snapshot for one expense 1`] = `
 <div>
   <div>
     <h3>
-      Expenses Summary
-    </h3>
-    <p>
       You are viewing 
       1
        
       expense
        totaling 
       $94.34
-    </p>
+    </h3>
   </div>
 </div>
 `;
@@ -32,16 +29,13 @@ exports[`should render the correct snapshot for two expenses 1`] = `
 <div>
   <div>
     <h3>
-      Expenses Summary
-    </h3>
-    <p>
       You are viewing 
       2
        
       expenses
        totaling 
       $94.34
-    </p>
+    </h3>
   </div>
 </div>
 `;
