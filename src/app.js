@@ -9,7 +9,7 @@ import {addExpense} from './actions/expenses';
 import {setTextFilter} from './actions/filters';
 import getVisibileExpenses from './selectors/expenses';
 // style
-import 'react-dates/initialize';
+// import 'react-dates/initialize';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';

@@ -70,7 +70,7 @@ test('should call onSubmit prop for valid form submission', () => {
 test('should set new date onDateChange', () => {
   const now = moment();
   const wrapper = shallow(<ExpenseForm />);
-  wrapper.find('withStyles(SingleDatePicker)').prop('onDateChange')(now);
+  wrapper.find('SingleDatePicker').prop('onDateChange')(now);
   expect(wrapper.state('createdAt')).toEqual(now);
 });
 
@@ -78,6 +78,6 @@ test('should set new value for onFocusChange', () => {
   const now = moment();
   const focused = true;
   const wrapper = shallow(<ExpenseForm />);
-  wrapper.find('withStyles(SingleDatePicker)').prop('onFocusChange')({focused});
+  wrapper.find('SingleDatePicker').prop('onFocusChange')({focused});
   expect(wrapper.state('calendarFocused')).toEqual(focused);
 });
