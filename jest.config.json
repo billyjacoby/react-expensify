@@ -4,6 +4,7 @@
   ],
   "setupFiles": [
     "raf/polyfill",
+    "<rootDir>/src/tests/setup-tests.js",
     "<rootDir>/src/tests/setup-tests.js"
   ],
   "moduleNameMapper": {
