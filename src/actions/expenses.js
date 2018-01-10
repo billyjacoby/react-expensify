@@ -40,3 +40,45 @@ export const editExpense = (id, updates) => ({
   id,
   updates
 });
+
+// SET_EXPENSES
+export const setExpenses = (expenses) => ({
+  type: 'SET_EXPENSES',
+  expenses
+});
+
+// this is how the expenses are set from firebase to redux
+
+export const startSetExpenses = () => {
+  return (dispatch) => {
+    return database.ref('expenses').once('value').then((snapshot) => {
+      const expenses = [];
+
+      snapshot.forEach((snapshotChild) => {
+        expenses.push({
+          id: snapshotChild.key,
+          ...snapshotChild.val()
+        });
+      });
+
+      dispatch(setExpenses(expenses));
+    })
+  }
+}
+
+  // return (dispatch) => {
+  //   const expenses = [];
+  //
+  //   database.ref('expenses').once('value', (snapshot) => {
+  //     snapshot.forEach((snapshotChild) => {
+  //       expenses.push({
+  //         id: snapshotChild.key,
+  //         ...snapshotChild
+  //       })
+  //     })
+  //   }, (e) => {
+  //     console.log('Error retrieving data:', e);
+  //   })
+  //
+  //     return dispatch(setExpenses(expenses))
+  // }
