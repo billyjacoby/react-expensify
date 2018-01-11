@@ -77,20 +77,3 @@ export const startSetExpenses = () => {
     })
   }
 }
-
-  // return (dispatch) => {
-  //   const expenses = [];
-  //
-  //   database.ref('expenses').once('value', (snapshot) => {
-  //     snapshot.forEach((snapshotChild) => {
-  //       expenses.push({
-  //         id: snapshotChild.key,
-  //         ...snapshotChild
-  //       })
-  //     })
-  //   }, (e) => {
-  //     console.log('Error retrieving data:', e);
-  //   })
-  //
-  //     return dispatch(setExpenses(expenses))
-  // }
